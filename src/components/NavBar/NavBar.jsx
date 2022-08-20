@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import logoNav from "./assets/logohdp.png";
+import logoNav from "../assets/logohdp.png";
+import CartWidget from "./CartWidget";
 
 function Navbar() {
     return (
@@ -15,6 +16,9 @@ function Navbar() {
                         <a href="/">HACE TU PEDIDO</a>
                         <a href="/">SOBRE H.D.P</a>
                         <a href="/">CONTACTO</a>
+                    </div>
+                    <div>
+                        <CartWidget />
                     </div>
                 </nav>
             </NavContainer>
@@ -40,7 +44,7 @@ const NavContainer = styled.nav`
             font-size: 1rem;
             margin-right: 35px;
             transition: all 0.5s;
-            letter-spacing: 1.5px;
+            letter-spacing: 0.3rem;
         }
         a:hover {
             color: #ffc73b;

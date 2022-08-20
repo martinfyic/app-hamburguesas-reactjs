@@ -1,10 +1,14 @@
 import "./App.css";
-import Navbar from "./components/NavBar";
+import ItemListContainer from "./components/Container/ItemListContainer";
+import Navbar from "./components/NavBar/NavBar";
 
 const App = () => {
     return (
         <>
-            <Navbar />
+            <header>
+                <Navbar />
+                <ItemListContainer greeting="HDP Smash Burgers" />
+            </header>
         </>
     );
 };
