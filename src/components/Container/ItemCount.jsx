@@ -2,9 +2,8 @@ import { useState } from "react";
 import burguer_1 from "../assets/burguer_1.png";
 import styles from "./ItemCount.module.css";
 
-export const ItemCount = ({ value, stock }) => {
-    const [counter, setCounter] = useState(value);
-    // const [stockProd] = useState(stock);
+export const ItemCount = ({ initial, stock }) => {
+    const [counter, setCounter] = useState(initial);
 
     const addProduct = () => {
         if (stock > counter) {

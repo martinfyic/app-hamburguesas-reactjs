@@ -5,7 +5,7 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <h1 className={styles.Title}>{greeting}</h1>
-            <ItemCount stock={10} value={1} />
+            <ItemCount stock={10} initial={1} />
         </>
     );
 };

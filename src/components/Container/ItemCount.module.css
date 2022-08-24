@@ -68,11 +68,11 @@
 }
 
 .AddButton:hover {
-    opacity: 0.5;
-    transform: scale(0.95);
+    opacity: 0.7;
+    transform: scale(1.07);
 }
 
 .Buttons button:hover {
-    opacity: 0.5;
+    opacity: 0.7;
     transform: scale(0.95);
 }
