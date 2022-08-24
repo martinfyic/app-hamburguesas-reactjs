@@ -8,7 +8,7 @@ function CartWidget() {
             <Badge bg="bg-none">
                 {" "}
                 <img src={ImgBadage} alt="carrito de compras" />
-                <span className="px-2 fw-bold">5</span>
+                <span className="px-2 fw-bold">3</span>
             </Badge>
             <span className="visually-hidden">unread messages</span>
         </Button>
