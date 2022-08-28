@@ -5,3 +5,11 @@
     font-size: 3rem;
     letter-spacing: 0.4rem;
 }
+
+.ShoppingCart p {
+    color: #ffdead;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1.5rem;
+}

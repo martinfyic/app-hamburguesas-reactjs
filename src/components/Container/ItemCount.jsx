@@ -4,7 +4,6 @@ import styles from "./ItemCount.module.css";
 
 export const ItemCount = ({ initial, stock, onAdd }) => {
     const [counter, setCounter] = useState(initial);
-    const [bagShop, setBagShop] = useState(0);
 
     //Sumar 1 prod, con limite de stock
     const addProduct = () => {
@@ -20,9 +19,9 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
         }
     };
 
-    //Agregar cantidad de prod
-    const shop = () => {
-        return setBagShop(counter);
+    //Agregar producto al carrito
+    const shopProduct = () => {
+        onAdd(counter);
     };
 
     return (
@@ -35,12 +34,9 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
                 <p>{counter}</p>
                 <button onClick={addProduct}>+</button>
             </div>
-            <button className={styles.AddButton} onClick={shop}>
+            <button className={styles.AddButton} onClick={shopProduct}>
                 Agregar
             </button>
-            <div className={styles.ShoppingCart}>
-                <p>Agregaste {bagShop} 🍔</p>
-            </div>
         </div>
     );
 };
