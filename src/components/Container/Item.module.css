@@ -1,0 +1,64 @@
+.itemCard {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    /* overflow-wrap: break-word; */
+    padding: 10px;
+}
+
+.itemImage {
+    border-radius: 10px;
+    background-color: azure;
+    transition: all 0.3s;
+}
+
+.itemImage:hover {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+.itemTitle {
+    color: #ffc73b;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.itemPrice {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.itemStock {
+    color: #9c9c9c;
+    font-size: 1.2rem;
+}
+
+.AddButton {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.3rem 1.3rem;
+    background-color: rgb(223, 1, 1);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.AddButton:hover {
+    opacity: 0.7;
+    transform: scale(1.07);
+}
+
+@media (max-width: 550px) {
+    .itemImage {
+        width: 90%;
+        height: auto;
+    }
+}
