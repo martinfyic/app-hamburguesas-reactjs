@@ -6,7 +6,5 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #000000;
-    /* Eliminar color txt */
-    color: white;
     list-style: none;
 }
