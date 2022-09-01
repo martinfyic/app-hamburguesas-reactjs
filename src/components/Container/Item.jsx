@@ -4,6 +4,7 @@ export const Item = (prod) => {
     return (
         <li className={styles.itemCard}>
             <img
+                loading="lazy"
                 className={styles.itemImage}
                 width={230}
                 height={280}

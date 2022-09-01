@@ -16,10 +16,16 @@ export const ItemList = () => {
     }, []);
 
     return (
-        <ul className={styles.itemListGrid}>
-            {products.map((prod) => (
-                <Item key={prod.id} {...prod} />
-            ))}
-        </ul>
+        <div
+            className={!products.length ? styles.snniper : styles.itemListGrid}
+        >
+            {!products.length ? (
+                <div className={styles.snniperContainer}>
+                    <span className={styles.loader}></span>
+                </div>
+            ) : (
+                products.map((prod) => <Item key={prod.id} {...prod} />)
+            )}
+        </div>
     );
 };
