@@ -32,7 +32,7 @@ export const ItemDetail = () => {
                     return (
                         <div key={prod.id} className={styles.detailContainer}>
                             <img src={prod.pictureUrl} alt={prod.title} />
-                            <div>
+                            <div className={styles.infoContainer}>
                                 <p className={styles.tituloDetails}>
                                     {prod.title}
                                 </p>
@@ -48,6 +48,15 @@ export const ItemDetail = () => {
                                     </strong>{" "}
                                     ${prod.price}
                                 </p>
+                                <p className={styles.stockDetails}>
+                                    <strong className={styles.strong}>
+                                        Stock:
+                                    </strong>{" "}
+                                    {prod.stock}
+                                </p>
+                                <button className={styles.AddButton}>
+                                    Comprar
+                                </button>
                             </div>
                         </div>
                     );

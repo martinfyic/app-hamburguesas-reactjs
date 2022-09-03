@@ -11,7 +11,7 @@ const App = () => {
             </header>
             <main>
                 {/* <ItemListContainer greeting="HDP Smash Burgers" /> */}
-                <ItemDetailContainer titleDetail="Detalle del producto" />
+                <ItemDetailContainer titleDetail="HDP Smash Burgers" />
             </main>
         </>
     );

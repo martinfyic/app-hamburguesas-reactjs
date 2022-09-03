@@ -3,12 +3,28 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .detailContainer img {
     width: 500px;
     height: auto;
     border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.detailContainer img:hover {
+    opacity: 0.8;
+    transform: scale(0.99);
+}
+
+.infoContainer {
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .tituloDetails {
@@ -36,6 +52,31 @@
     letter-spacing: 0.2rem;
     text-align: center;
     margin-top: 0.5rem;
+}
+
+.stockDetails {
+    color: #9c9c9c;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.AddButton {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.3rem 1.3rem;
+    background-color: rgb(223, 1, 1);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.AddButton:hover {
+    opacity: 0.7;
+    transform: scale(1.07);
 }
 
 .strong {
