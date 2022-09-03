@@ -14,7 +14,7 @@ export const Item = (prod) => {
             <h2 className={styles.itemTitle}>{prod.title}</h2>
             <p className={styles.itemPrice}>U$ {prod.price}</p>
             <p className={styles.itemStock}>Stock {prod.stock}</p>
-            <button className={styles.AddButton}>Agregar</button>
+            {/* <button className={styles.AddButton}>Agregar</button> */}
         </li>
     );
 };

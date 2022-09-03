@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getDataProd } from "../../utilities/getProducts";
+import { getDataProd } from "../../utilities/getDataProd";
 import { Item } from "./Item";
 import styles from "./ItemList.module.css";
 
@@ -7,8 +7,10 @@ export const ItemList = () => {
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
-        const nerProducts = await getDataProd();
-        setProducts(nerProducts);
+        const newProducts = await getDataProd();
+        setTimeout(() => {
+            setProducts(newProducts);
+        }, 2000);
     };
 
     useEffect(() => {

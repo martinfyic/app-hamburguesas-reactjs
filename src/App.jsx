@@ -1,5 +1,6 @@
 import Navbar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/Container/ItemListContainer";
+// import ItemListContainer from "./components/Container/ItemListContainer";
+import { ItemDetailContainer } from "./components/Container/ItemDetailContainer";
 import "./App.css";
 
 const App = () => {
@@ -9,7 +10,8 @@ const App = () => {
                 <Navbar />
             </header>
             <main>
-                <ItemListContainer greeting="HDP Smash Burgers" />
+                {/* <ItemListContainer greeting="HDP Smash Burgers" /> */}
+                <ItemDetailContainer titleDetail="Detalle del producto" />
             </main>
         </>
     );
