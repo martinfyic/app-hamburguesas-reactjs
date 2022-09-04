@@ -6,8 +6,8 @@ export const Item = (prod) => {
             <img
                 loading="lazy"
                 className={styles.itemImage}
-                width={230}
-                height={280}
+                width={260}
+                height={230}
                 src={prod.pictureUrl}
                 alt={prod.title}
             />
