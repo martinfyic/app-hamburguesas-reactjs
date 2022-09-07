@@ -8,7 +8,7 @@ export const ItemDetail = () => {
 
     const getItem = async () => {
         const detail = await getDataProd();
-        const detailItem = detail.filter((elem) => elem.id === 2);
+        const detailItem = detail.filter((elem) => elem.id === 10);
         setTimeout(() => {
             setItemDetail(detailItem);
         }, 2000);
