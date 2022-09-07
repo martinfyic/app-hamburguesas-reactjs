@@ -6,9 +6,6 @@ const ItemListContainer = (props) => {
         <>
             <h1 className={styles.Title}>{props.greeting}</h1>
             <ItemList />
-            {/* <div className={styles.ShoppingCart}>
-                <p>Agregaste {0} 🍔</p>
-            </div> */}
         </>
     );
 };

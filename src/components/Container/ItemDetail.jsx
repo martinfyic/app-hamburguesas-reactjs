@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { getDataProd } from "../../utilities/getDataProd";
+import { ItemCount } from "./ItemCount";
 import styles from "./ItemDetail.module.css";
 
 export const ItemDetail = () => {
-    const [itemDetail, setItemDetail] = useState([]);
+    const [itemDetail, setItemDetail] = useState({});
 
     const getItem = async () => {
         const detail = await getDataProd();
-        const detailItem = detail.filter((elem) => elem.id === 3);
+        const detailItem = detail.filter((elem) => elem.id === 2);
         setTimeout(() => {
             setItemDetail(detailItem);
         }, 2000);
@@ -48,15 +49,7 @@ export const ItemDetail = () => {
                                     </strong>{" "}
                                     ${prod.price}
                                 </p>
-                                <p className={styles.stockDetails}>
-                                    <strong className={styles.strong}>
-                                        Stock:
-                                    </strong>{" "}
-                                    {prod.stock}
-                                </p>
-                                <button className={styles.AddButton}>
-                                    Comprar
-                                </button>
+                                <ItemCount {...prod} />
                             </div>
                         </div>
                     );

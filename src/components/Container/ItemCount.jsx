@@ -1,13 +1,12 @@
 import { useState } from "react";
-import burguer_1 from "../assets/burguer_1.png";
 import styles from "./ItemCount.module.css";
 
-export const ItemCount = ({ initial, stock, onAdd }) => {
-    const [counter, setCounter] = useState(initial);
+export const ItemCount = (prod) => {
+    const [counter, setCounter] = useState(1);
 
     //Sumar 1 prod, con limite de stock
     const addProduct = () => {
-        if (stock > counter) {
+        if (prod.stock > counter) {
             return setCounter(counter + 1);
         }
     };
@@ -19,24 +18,17 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
         }
     };
 
-    //Agregar producto al carrito
-    const shopProduct = () => {
-        onAdd(counter);
-    };
-
     return (
         <div className={styles.CardContainer}>
-            <img src={burguer_1} alt="Imagen de hamburguesa" />
-            <h3 className={styles.DescriptionCard}>HIJA DE RE MIL POWER</h3>
-            <h4 className={styles.StockProduct}>Stock {stock - counter}</h4>
+            <h4 className={styles.StockProduct}>
+                Stock {prod.stock - counter}
+            </h4>
             <div className={styles.Buttons}>
                 <button onClick={lessProduct}>-</button>
                 <p>{counter}</p>
                 <button onClick={addProduct}>+</button>
             </div>
-            <button className={styles.AddButton} onClick={shopProduct}>
-                Agregar
-            </button>
+            <button className={styles.AddButton}>Agregar</button>
         </div>
     );
 };

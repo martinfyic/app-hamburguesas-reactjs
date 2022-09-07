@@ -12,9 +12,8 @@ export const Item = (prod) => {
                 alt={prod.title}
             />
             <h2 className={styles.itemTitle}>{prod.title}</h2>
-            <p className={styles.itemPrice}>U$ {prod.price}</p>
+            <p className={styles.itemPrice}>$ {prod.price}</p>
             <p className={styles.itemStock}>Stock {prod.stock}</p>
-            {/* <button className={styles.AddButton}>Agregar</button> */}
         </li>
     );
 };
