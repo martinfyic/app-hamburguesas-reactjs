@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logoNav from "../assets/logohdp.png";
 import CartWidget from "./CartWidget";
@@ -8,15 +9,23 @@ function Navbar() {
         <>
             <NavContainer>
                 <nav>
-                    <a href="/">
+                    <Link to={"/"}>
                         <img src={logoNav} alt="logo hdp" />
-                    </a>
-                    <div>
-                        <a href="/">VER MENU</a>
-                        <a href="/">HACE TU PEDIDO</a>
-                        <a href="/">SOBRE H.D.P</a>
-                        <a href="/">CONTACTO</a>
-                    </div>
+                    </Link>
+                    <ul>
+                        <li>
+                            <Link to={"/"}>HOME</Link>
+                        </li>
+                        <li>
+                            <Link to={"/itemdetail"}>HACE TU PEDIDO</Link>
+                        </li>
+                        <li>
+                            <Link to={"/itemdetail"}>SOBRE H.D.P</Link>
+                        </li>
+                        <li>
+                            <Link to={"/itemdetail"}>CONTACTO</Link>
+                        </li>
+                    </ul>
                     <div>
                         <CartWidget />
                     </div>
@@ -33,7 +42,7 @@ const NavContainer = styled.nav`
         width: 75%;
         height: auto;
     }
-    div {
+    ul {
         display: flex;
         align-items: center;
         a {
@@ -49,7 +58,6 @@ const NavContainer = styled.nav`
         a:hover {
             color: #ffc73b;
             opacity: 0.9;
-            transform: scale(1.1);
         }
     }
     nav {
