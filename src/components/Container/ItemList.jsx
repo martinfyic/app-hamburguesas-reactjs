@@ -10,7 +10,7 @@ export const ItemList = () => {
         const newProducts = await getDataProd();
         setTimeout(() => {
             setProducts(newProducts);
-        }, 2000);
+        }, 1000);
     };
 
     useEffect(() => {

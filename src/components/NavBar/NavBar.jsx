@@ -17,13 +17,10 @@ function Navbar() {
                             <Link to={"/"}>INICIO</Link>
                         </li>
                         <li>
-                            <Link to={"/itemdetail"}>HACE TU PEDIDO</Link>
+                            <Link to={"/category/1"}>HAMBURGUESAS</Link>
                         </li>
                         <li>
-                            <Link to={"/itemdetail"}>SOBRE H.D.P</Link>
-                        </li>
-                        <li>
-                            <Link to={"/itemdetail"}>CONTACTO</Link>
+                            <Link to={"/category/2"}>CERVEZAS</Link>
                         </li>
                     </ul>
                     <div>
@@ -69,4 +66,6 @@ const NavContainer = styled.nav`
     }
     padding: 0.5rem;
     background-color: #000000;
+    max-width: 1600px;
+    margin: 0 auto;
 `;

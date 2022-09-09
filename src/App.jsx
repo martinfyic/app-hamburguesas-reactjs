@@ -17,6 +17,10 @@ const App = () => {
                         }
                     />
                     <Route
+                        path="/category/:id"
+                        element={<ItemListContainer greeting="Categoria" />}
+                    />
+                    <Route
                         path="/item/:id"
                         element={
                             <ItemDetailContainer titleDetail="Detalle de producto" />
