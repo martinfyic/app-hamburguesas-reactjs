@@ -1,22 +1,24 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { getDataProd } from "../../utilities/getDataProd";
 import { ItemCount } from "./ItemCount";
 import styles from "./ItemDetail.module.css";
 
 export const ItemDetail = () => {
     const [itemDetail, setItemDetail] = useState({});
+    const { id } = useParams();
 
-    const getItem = async () => {
+    const getItem = async (prodId) => {
         const detail = await getDataProd();
-        const detailItem = detail.filter((elem) => elem.id === 10);
-        setTimeout(() => {
-            setItemDetail(detailItem);
-        }, 2000);
+        const detailItem = detail.filter((elem) => elem.id === prodId);
+        return detailItem;
     };
 
     useEffect(() => {
-        getItem();
-    }, []);
+        setTimeout(() => {
+            getItem(id).then((resp) => setItemDetail(resp));
+        }, 2000);
+    }, [id]);
 
     return (
         <div

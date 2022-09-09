@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Item.module.css";
 
 export const Item = (prod) => {
@@ -13,7 +14,9 @@ export const Item = (prod) => {
             <h2 className={styles.itemTitle}>{prod.title}</h2>
             <p className={styles.itemPrice}>$ {prod.price}</p>
             <p className={styles.itemStock}>Stock {prod.stock}</p>
-            <button className={styles.AddButton}> VER + </button>
+            <Link to={`item/${prod.id}`}>
+                <button className={styles.AddButton}>VER +</button>
+            </Link>
         </li>
     );
 };

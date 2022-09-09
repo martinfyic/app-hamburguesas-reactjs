@@ -17,7 +17,7 @@ const App = () => {
                         }
                     />
                     <Route
-                        path="/itemdetail"
+                        path="/item/:id"
                         element={
                             <ItemDetailContainer titleDetail="Detalle de producto" />
                         }
