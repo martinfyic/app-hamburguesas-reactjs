@@ -8,14 +8,10 @@ export const ItemDetail = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        setTimeout(() => {
-            fetch("../../productsData.json")
-                .then((resp) => resp.json())
-                .then((data) =>
-                    setItemDetail(
-                        data.filter((elem) => elem.id === parseInt(id))
-                    )
-                );
+        setTimeout(async () => {
+            const resp = await fetch("../../productsData.json");
+            const data = await resp.json();
+            setItemDetail(data.filter((elem) => elem.id === parseInt(id)));
         }, 1500);
     }, [id]);
 
