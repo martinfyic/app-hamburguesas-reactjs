@@ -17,7 +17,7 @@ const App = () => {
                         }
                     />
                     <Route
-                        path="/category/:id"
+                        path="/category/:categid"
                         element={<ItemListContainer greeting="Categoria" />}
                     />
                     <Route

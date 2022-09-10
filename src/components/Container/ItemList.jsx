@@ -3,19 +3,29 @@ import { getDataProd } from "../../utilities/getDataProd";
 import { Item } from "./Item";
 import styles from "./ItemList.module.css";
 
-export const ItemList = () => {
+export const ItemList = ({ categoryId }) => {
     const [products, setProducts] = useState([]);
 
-    const getProducts = async () => {
+    const getProducts = async (categoryId) => {
         const newProducts = await getDataProd();
-        setTimeout(() => {
-            setProducts(newProducts);
-        }, 1000);
+        if (categoryId === "hamburguesas") {
+            const burgers = newProducts.map(
+                (elem) => elem.categoryName === "HAMBURGUESAS"
+            );
+            return setProducts(burgers);
+        }
+        if (categoryId === "cervezas") {
+            const beers = newProducts.filter((elem) => elem.category === 2);
+            return setProducts(beers);
+        }
+        if (categoryId === undefined) {
+            return setProducts(newProducts);
+        }
     };
 
     useEffect(() => {
-        getProducts();
-    }, []);
+        getProducts(categoryId);
+    }, [categoryId]);
 
     return (
         <div

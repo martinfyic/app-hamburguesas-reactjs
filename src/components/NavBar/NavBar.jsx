@@ -17,10 +17,12 @@ function Navbar() {
                             <Link to={"/"}>INICIO</Link>
                         </li>
                         <li>
-                            <Link to={"/category/1"}>HAMBURGUESAS</Link>
+                            <Link to={"/category/hamburguesas"}>
+                                HAMBURGUESAS
+                            </Link>
                         </li>
                         <li>
-                            <Link to={"/category/2"}>CERVEZAS</Link>
+                            <Link to={"/category/cervezas"}>CERVEZAS</Link>
                         </li>
                     </ul>
                     <div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { getDataProd } from "../../utilities/getDataProd";
 import { ItemCount } from "./ItemCount";
 import styles from "./ItemDetail.module.css";
 
@@ -9,10 +10,9 @@ export const ItemDetail = () => {
 
     useEffect(() => {
         setTimeout(async () => {
-            const resp = await fetch("../../productsData.json");
-            const data = await resp.json();
-            setItemDetail(data.filter((elem) => elem.id === parseInt(id)));
-        }, 1500);
+            const resp = await getDataProd();
+            setItemDetail(resp.filter((elem) => elem.id === parseInt(id)));
+        }, 1000);
     }, [id]);
 
     return (
