@@ -3,7 +3,7 @@ import styles from "./Item.module.css";
 
 export const Item = (prod) => {
     return (
-        <li className={styles.itemCard}>
+        <li key={prod.id} className={styles.itemCard}>
             <img
                 loading="lazy"
                 className={styles.itemImage}

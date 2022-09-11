@@ -9,13 +9,15 @@ export const ItemList = ({ categoryId }) => {
     const getProducts = async (categoryId) => {
         const newProducts = await getDataProd();
         if (categoryId === "hamburguesas") {
-            const burgers = newProducts.map(
-                (elem) => elem.categoryName === "HAMBURGUESAS"
+            const burgers = newProducts.filter(
+                (elem) => elem.categoryName === categoryId.toUpperCase()
             );
             return setProducts(burgers);
         }
         if (categoryId === "cervezas") {
-            const beers = newProducts.filter((elem) => elem.category === 2);
+            const beers = newProducts.filter(
+                (elem) => elem.categoryName === categoryId.toUpperCase()
+            );
             return setProducts(beers);
         }
         if (categoryId === undefined) {
@@ -24,13 +26,13 @@ export const ItemList = ({ categoryId }) => {
     };
 
     useEffect(() => {
-        getProducts(categoryId);
+        setTimeout(() => {
+            getProducts(categoryId);
+        }, 1000);
     }, [categoryId]);
 
     return (
-        <div
-            className={!products.length ? styles.snniper : styles.itemListGrid}
-        >
+        <ul className={!products.length ? styles.snniper : styles.itemListGrid}>
             {!products.length ? (
                 <div className={styles.snniperContainer}>
                     <span className={styles.loader}></span>
@@ -38,6 +40,6 @@ export const ItemList = ({ categoryId }) => {
             ) : (
                 products.map((prod) => <Item key={prod.id} {...prod} />)
             )}
-        </div>
+        </ul>
     );
 };
