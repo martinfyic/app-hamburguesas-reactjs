@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# H.D.P Smash Burgers
+Proyecto para el curso de **React Js** de [Coderhouse](https://www.coderhouse.com.uy/ "Coderhouse")
+Comisión **43645** 
+
+## Consigna
+Generar un ecommerce con React Js
+
+### # Gif
+[![](https://github.com/martinfyic/cursoreactjs/blob/master/Proyecto-React-HDP-Burger.gif?raw=true)](https://github.com/martinfyic/cursoreactjs/blob/master/Proyecto-React-HDP-Burger.gif?raw=true)
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
