@@ -7,14 +7,14 @@
     margin: 0 auto;
 }
 
-.detailContainer img {
+.imgProd {
     width: 500px;
     height: auto;
     border-radius: 10px;
     transition: all 0.3s;
 }
 
-.detailContainer img:hover {
+.imgProd:hover {
     opacity: 0.8;
     transform: scale(0.99);
 }
@@ -81,6 +81,32 @@
 
 .strong {
     color: #ffc73b;
+}
+
+@media (max-width: 950px) {
+    .detailContainer {
+        flex-wrap: wrap;
+    }
+
+    .imgProd {
+        width: 300px;
+    }
+
+    .tituloDetails {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .stockDetails {
+        font-size: 1rem;
+    }
 }
 
 /* Spinner */

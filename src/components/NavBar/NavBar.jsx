@@ -1,10 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logoNav from "../assets/logohdp.png";
+import { BurguerButton } from "./BurguerButton";
 import CartWidget from "./CartWidget";
 
 function Navbar() {
+    const [clicked, setClicked] = useState(false);
+    const handelClick = () => {
+        // cuando esta true lo pasa a false y vice versa
+        setClicked(!clicked);
+    };
     return (
         <>
             <NavContainer>
@@ -12,22 +19,33 @@ function Navbar() {
                     <Link to={"/"}>
                         <img src={logoNav} alt="logo hdp" />
                     </Link>
-                    <ul>
-                        <li>
-                            <Link to={"/"}>INICIO</Link>
-                        </li>
-                        <li>
-                            <Link to={"/category/hamburguesas"}>
-                                HAMBURGUESAS
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={"/category/cervezas"}>CERVEZAS</Link>
-                        </li>
-                    </ul>
-                    <div>
-                        <CartWidget />
+                    <div className={`navMenuLinks ${clicked ? "active" : ""}`}>
+                        <ul>
+                            <li>
+                                <Link to={"/"}>INICIO</Link>
+                            </li>
+                            <li>
+                                <Link to={"/category/hamburguesas"}>
+                                    HAMBURGUESAS
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to={"/category/cervezas"}>CERVEZAS</Link>
+                            </li>
+                        </ul>
+                        <div className="cartWidgetBottom">
+                            <CartWidget />
+                        </div>
                     </div>
+                    <div className="burgerButton">
+                        <BurguerButton
+                            clicked={clicked}
+                            handelClick={handelClick}
+                        />
+                    </div>
+                    <BackgroundDiv
+                        className={`initial ${clicked ? "active" : ""}`}
+                    />
                 </nav>
             </NavContainer>
         </>
@@ -70,4 +88,85 @@ const NavContainer = styled.nav`
     background-color: #000000;
     max-width: 1600px;
     margin: 0 auto;
+    .navMenuLinks {
+        display: flex;
+        justify-content: space-between;
+        aling-item: center;
+        line-height: 2em;
+        div {
+            display: flex;
+            aling-item: center;
+            margin-bottom: 1em;
+        }
+        position: absolute;
+        top: -700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        transition: all 0.5s ease;
+        @media (min-width: 900px) {
+            position: initial;
+            margin: 0;
+            display: inline;
+            display: flex;
+            justify-content: space-between;
+            aling-item: center;
+            line-height: 2em;
+            div {
+                display: flex;
+                aling-item: center;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    .navMenuLinks.active {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        aling-item: center;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 112px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                margin-bottom: 2rempx;
+            }
+        }
+        .cartWidgetBottom {
+            display: flex;
+            justify-content: center;
+            aling-item: center;
+        }
+    }
+    .burgerButton {
+        @media (min-width: 900px) {
+            display: none;
+        }
+    }
+`;
+
+const BackgroundDiv = styled.div`
+    position: absolute;
+    background-color: #000000;
+    top: -700px;
+    left: -1000px;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+    transition: all 0.8s;
+    &.active {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
 `;

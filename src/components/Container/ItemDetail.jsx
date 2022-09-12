@@ -29,7 +29,11 @@ export const ItemDetail = () => {
                 itemDetail.map((prod) => {
                     return (
                         <div key={prod.id} className={styles.detailContainer}>
-                            <img src={prod.pictureUrl} alt={prod.title} />
+                            <img
+                                className={styles.imgProd}
+                                src={prod.pictureUrl}
+                                alt={prod.title}
+                            />
                             <div className={styles.infoContainer}>
                                 <p className={styles.tituloDetails}>
                                     {prod.title}

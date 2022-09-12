@@ -6,6 +6,7 @@ import styles from "./ItemList.module.css";
 export const ItemList = ({ categoryId }) => {
     const [products, setProducts] = useState([]);
 
+    //filtrado de productos x categoria tomando referencia useParams 1-hamburguesas 2-cervezas 3-todos(undefineda)
     const getProducts = async (categoryId) => {
         const newProducts = await getDataProd();
         if (categoryId === "hamburguesas") {
@@ -26,9 +27,7 @@ export const ItemList = ({ categoryId }) => {
     };
 
     useEffect(() => {
-        setTimeout(() => {
-            getProducts(categoryId);
-        }, 1000);
+        getProducts(categoryId);
     }, [categoryId]);
 
     return (
