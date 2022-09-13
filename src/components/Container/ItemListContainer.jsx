@@ -8,6 +8,7 @@ const ItemListContainer = (props) => {
     return (
         <>
             <h1 className={styles.Title}>{props.greeting}</h1>
+            {categid && <h2 className={styles.subTitle}>{categid}</h2>}
             <ItemList categoryId={categid} />
         </>
     );

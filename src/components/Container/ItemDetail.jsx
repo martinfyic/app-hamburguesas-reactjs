@@ -1,19 +1,24 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { getDataProd } from "../../utilities/getDataProd";
+import { useState } from "react";
 import { ItemCount } from "./ItemCount";
 import styles from "./ItemDetail.module.css";
 
-export const ItemDetail = () => {
-    const [itemDetail, setItemDetail] = useState({});
-    const { id } = useParams();
+export const ItemDetail = ({ itemDetail }) => {
+    const [counter, setCounter] = useState(1);
 
-    useEffect(() => {
-        setTimeout(async () => {
-            const resp = await getDataProd();
-            setItemDetail(resp.filter((elem) => elem.id === parseInt(id)));
-        }, 1000);
-    }, [id]);
+    //Sumar 1 prod, con limite de stock
+    const addProduct = () => {
+        let stockItem = itemDetail[0].stock;
+        if (stockItem > counter) {
+            setCounter(counter + 1);
+        }
+    };
+
+    //Restar 1 prod, con limite de 1
+    const lessProduct = () => {
+        if (1 < counter) {
+            setCounter(counter - 1);
+        }
+    };
 
     return (
         <div
@@ -50,7 +55,15 @@ export const ItemDetail = () => {
                                     </strong>{" "}
                                     ${prod.price}
                                 </p>
-                                <ItemCount {...prod} />
+                                <h4 className={styles.StockProduct}>
+                                    Stock {prod.stock - counter}
+                                </h4>
+                                <ItemCount
+                                    addProduct={addProduct}
+                                    lessProduct={lessProduct}
+                                    counter={counter}
+                                    {...prod}
+                                />
                             </div>
                         </div>
                     );

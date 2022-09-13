@@ -7,6 +7,15 @@
     letter-spacing: 0.4rem;
 }
 
+.subTitle {
+    color: #ffdead;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.4rem;
+}
+
 .ShoppingCart p {
     color: #ffdead;
     font-size: 2rem;

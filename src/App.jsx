@@ -26,6 +26,7 @@ const App = () => {
                             <ItemDetailContainer titleDetail="Detalle de producto" />
                         }
                     />
+                    <Route path="/cart" element={<></>} />
                 </Routes>
             </BrowserRouter>
         </>
