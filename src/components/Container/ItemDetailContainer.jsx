@@ -8,10 +8,6 @@ export const ItemDetailContainer = (props) => {
     const [itemDetail, setItemDetail] = useState({});
     const { id } = useParams();
 
-    // *? test area
-
-    // *? test area
-
     useEffect(() => {
         setTimeout(async () => {
             const resp = await getDataProd();
