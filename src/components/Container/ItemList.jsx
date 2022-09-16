@@ -15,6 +15,12 @@ export const ItemList = ({ categoryId }) => {
             );
             return setProducts(burgers);
         }
+        if (categoryId === "fritas") {
+            const fried = newProducts.filter(
+                (elem) => elem.categoryName === categoryId.toUpperCase()
+            );
+            return setProducts(fried);
+        }
         if (categoryId === "cervezas") {
             const beers = newProducts.filter(
                 (elem) => elem.categoryName === categoryId.toUpperCase()

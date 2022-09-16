@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logoNav from "../assets/logohdp.png";
 import { BurguerButton } from "./BurguerButton";
-import CartWidget from "./CartWidget";
+import { CartWidget } from "./CartWidget";
 
 function Navbar() {
     const [clicked, setClicked] = useState(false);
@@ -28,6 +28,9 @@ function Navbar() {
                                 <Link to={"/category/hamburguesas"}>
                                     HAMBURGUESAS
                                 </Link>
+                            </li>
+                            <li>
+                                <Link to={"/category/fritas"}>FRITAS</Link>
                             </li>
                             <li>
                                 <Link to={"/category/cervezas"}>CERVEZAS</Link>
