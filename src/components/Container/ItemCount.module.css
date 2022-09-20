@@ -43,12 +43,36 @@
     transition: all 0.3s;
 }
 
+.divButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.LessButton {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.3rem 1.3rem;
+    background-color: #959595;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+    letter-spacing: 0.2rem;
+}
+
+.LessButton:hover {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
 .AddButton {
     color: white;
     font-size: 1.5rem;
     font-weight: 700;
     padding: 0.3rem 1.3rem;
-    background-color: rgb(223, 1, 1);
+    background-color: #ffc73b;
     border: none;
     border-radius: 10px;
     transition: all 0.3s;
@@ -57,7 +81,7 @@
 
 .AddButton:hover {
     opacity: 0.7;
-    transform: scale(1.07);
+    transform: scale(0.98);
 }
 
 .Buttons button:hover {

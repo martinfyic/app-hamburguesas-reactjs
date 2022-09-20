@@ -56,13 +56,15 @@ export const ItemDetail = ({ itemDetail }) => {
                                     ${prod.price}
                                 </p>
                                 <h4 className={styles.StockProduct}>
-                                    Stock {prod.stock - counter}
+                                    {prod.stock - counter === 0
+                                        ? "Sin stock"
+                                        : `Stock ${prod.stock - counter}`}
                                 </h4>
                                 <ItemCount
                                     addProduct={addProduct}
                                     lessProduct={lessProduct}
                                     counter={counter}
-                                    {...prod}
+                                    prod={prod}
                                 />
                             </div>
                         </div>
