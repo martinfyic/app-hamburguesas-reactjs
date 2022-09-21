@@ -1,10 +1,12 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import styles from "./ItemCount.module.css";
 
 export const ItemCount = ({ addProduct, lessProduct, counter, prod }) => {
     const { addItemToCart, deleteItemToCart, isInCart } =
         useContext(CartContext);
+    const navigate = useNavigate();
 
     return (
         <div className={styles.CardContainer}>
@@ -40,8 +42,16 @@ export const ItemCount = ({ addProduct, lessProduct, counter, prod }) => {
                 </button>
             ) : (
                 <div className={styles.divButtons}>
-                    <button className={styles.SecondaryButton}>Volver</button>
-                    <button className={styles.SecondaryButton}>
+                    <button
+                        onClick={() => navigate(-1)}
+                        className={styles.SecondaryButton}
+                    >
+                        Volver
+                    </button>
+                    <button
+                        onClick={() => navigate("/cart")}
+                        className={styles.SecondaryButton}
+                    >
                         Finalizar
                     </button>
                 </div>
