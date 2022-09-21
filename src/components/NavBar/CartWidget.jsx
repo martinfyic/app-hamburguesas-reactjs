@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import cssStyled from "./CartWidget.module.css";
 import { CartContext } from "../../context/CartContext";
 import ImgBadage from "../assets/cartWidget.svg";
 
@@ -18,9 +19,11 @@ export const CartWidget = () => {
         <Button variant="bg-none">
             <Badge bg="bg-none">
                 {" "}
-                <Link to={"/cart"}>
+                <Link className={cssStyled.Link} to={"/cart"}>
                     <img src={ImgBadage} alt="carrito de compras" />
-                    <span className="px-2 fw-bold">{productInCart}</span>
+                    <span className={cssStyled.cartCounter}>
+                        {cart.length > 0 && productInCart}
+                    </span>
                 </Link>
             </Badge>
         </Button>

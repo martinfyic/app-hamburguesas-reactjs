@@ -3,24 +3,27 @@ import { CartContext } from "../../context/CartContext";
 import styles from "./ItemCount.module.css";
 
 export const ItemCount = ({ addProduct, lessProduct, counter, prod }) => {
-    const { addItemToCart, cart } = useContext(CartContext);
-    console.log(cart);
+    const { addItemToCart, deleteItemToCart, isInCart } =
+        useContext(CartContext);
+
     return (
         <div className={styles.CardContainer}>
             <>
-                {cart.length !== 0 && (
+                {isInCart(prod) && (
                     <div className={styles.Buttons}>
                         <button
                             onClick={() => {
                                 lessProduct();
+                                deleteItemToCart(prod);
                             }}
                         >
                             -
                         </button>
-                        <p>{cart[0].quantity}</p>
+                        <p>{counter}</p>
                         <button
                             onClick={() => {
                                 addProduct();
+                                addItemToCart(prod);
                             }}
                         >
                             +
@@ -28,20 +31,21 @@ export const ItemCount = ({ addProduct, lessProduct, counter, prod }) => {
                     </div>
                 )}
             </>
-            <div className={styles.divButtons}>
-                <button
-                    onClick={() => addItemToCart(prod, counter)}
-                    className={styles.LessButton}
-                >
-                    Eliminar
-                </button>
+            {!isInCart(prod) ? (
                 <button
                     onClick={() => addItemToCart(prod, counter)}
                     className={styles.AddButton}
                 >
                     Agregar
                 </button>
-            </div>
+            ) : (
+                <div className={styles.divButtons}>
+                    <button className={styles.SecondaryButton}>Volver</button>
+                    <button className={styles.SecondaryButton}>
+                        Finalizar
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

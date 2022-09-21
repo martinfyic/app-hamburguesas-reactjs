@@ -50,9 +50,10 @@
     align-items: center;
 }
 
-.LessButton {
+.SecondaryButton {
+    width: 150px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     padding: 0.3rem 1.3rem;
     background-color: #959595;
@@ -62,7 +63,7 @@
     letter-spacing: 0.2rem;
 }
 
-.LessButton:hover {
+.SecondaryButton:hover {
     opacity: 0.7;
     transform: scale(0.98);
 }

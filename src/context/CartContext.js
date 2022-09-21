@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
         localStorage.setItem("cartProducts", JSON.stringify(cart));
     }, [cart]);
 
-    const addItemToCart = (product, counter) => {
+    const addItemToCart = (product) => {
         const inCart = cart.find(
             (productInCart) => productInCart.id === product.id
         );
@@ -25,21 +25,12 @@ export const CartProvider = ({ children }) => {
             setCart(
                 cart.map((productInCart) => {
                     if (
-                        product.stock > productInCart.quantity &&
-                        productInCart.quantity + counter > product.stock
-                    ) {
-                        return {
-                            ...inCart,
-                            quantity: product.stock,
-                        };
-                    }
-                    if (
                         productInCart.id === product.id &&
                         product.stock > productInCart.quantity
                     ) {
                         return {
                             ...inCart,
-                            quantity: inCart.quantity + counter,
+                            quantity: inCart.quantity + 1,
                         };
                     }
                     return productInCart;
@@ -50,7 +41,7 @@ export const CartProvider = ({ children }) => {
                 ...cart,
                 {
                     ...product,
-                    quantity: counter,
+                    quantity: 1,
                 },
             ]);
         }
@@ -61,16 +52,19 @@ export const CartProvider = ({ children }) => {
             (productInCart) => productInCart.id === product.id
         );
 
+        if (!isInCart(product)) return;
         if (inCart.quantity === 1) {
             setCart(
                 cart.filter((productInCart) => productInCart.id !== product.id)
             );
         } else {
-            setCart((productInCart) => {
-                if (productInCart.id === product.id) {
-                    return { ...inCart, quantity: inCart.quantity - 1 };
-                } else return productInCart;
-            });
+            setCart(
+                cart.map((productInCart) => {
+                    if (productInCart.id === product.id) {
+                        return { ...inCart, quantity: inCart.quantity - 1 };
+                    } else return productInCart;
+                })
+            );
         }
     };
 
@@ -78,9 +72,19 @@ export const CartProvider = ({ children }) => {
         setCart([]);
     };
 
+    const isInCart = (itemId) => {
+        return cart.find((productInCart) => productInCart.id === itemId.id);
+    };
+
     return (
         <CartContext.Provider
-            value={{ cart, addItemToCart, deleteItemToCart, clearCart }}
+            value={{
+                cart,
+                addItemToCart,
+                deleteItemToCart,
+                clearCart,
+                isInCart,
+            }}
         >
             {children}
         </CartContext.Provider>
