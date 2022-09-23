@@ -5,7 +5,7 @@
         "price": 350,
         "pictureUrl": "../../burguer-1.png",
         "category": "1",
-        "categoryName": "HAMBURGUESAS",
+        "categoryName": "hamburguesas",
         "description": "Carne a elección + lechuga + repollo + muzzarella + salsas a elección",
         "stock": 3,
         "quantity": 0
@@ -16,7 +16,7 @@
         "price": 380,
         "pictureUrl": "../../burguer-2.jpg",
         "category": "1",
-        "categoryName": "HAMBURGUESAS",
+        "categoryName": "hamburguesas",
         "description": "Carne a elección + queso cheddar + queso muzzarella + salsas a elección",
         "stock": 7,
         "quantity": 0
@@ -27,7 +27,7 @@
         "price": 560,
         "pictureUrl": "../../burguer-3.jpg",
         "category": "1",
-        "categoryName": "HAMBURGUESAS",
+        "categoryName": "hamburguesas",
         "description": "smash burger 4 x 100 gramos +panceta +cebolla caramelizada +queso cheddar",
         "stock": 10,
         "quantity": 0
@@ -38,7 +38,7 @@
         "price": 410,
         "pictureUrl": "../../burguer-4.png",
         "category": "1",
-        "categoryName": "HAMBURGUESAS",
+        "categoryName": "hamburguesas",
         "description": "smash burger 3x100gramos + cheddar x 6",
         "stock": 4,
         "quantity": 0
@@ -49,7 +49,7 @@
         "price": 420,
         "pictureUrl": "../../burguer-5.png",
         "category": "1",
-        "categoryName": "HAMBURGUESAS",
+        "categoryName": "hamburguesas",
         "description": "medallon crocante de morcilla salada + alioli + repollo + queso emmental + smash burger",
         "stock": 7,
         "quantity": 0
@@ -60,7 +60,7 @@
         "price": 490,
         "pictureUrl": "../../burguer-6.png",
         "category": "1",
-        "categoryName": "HAMBURGUESAS",
+        "categoryName": "hamburguesas",
         "description": "smash burger 2x 100 gramos + medallon crocante de provolone frito + queso cheddar x4 + panceta",
         "stock": 9,
         "quantity": 0
@@ -71,7 +71,7 @@
         "price": 370,
         "pictureUrl": "../../burguer-7.png",
         "category": "1",
-        "categoryName": "HAMBURGUESAS",
+        "categoryName": "hamburguesas",
         "description": "smash burger 2x 100 gramos + queso cheddar + cebolla al vino blanco",
         "stock": 8,
         "quantity": 0
@@ -82,7 +82,7 @@
         "price": 350,
         "pictureUrl": "../../burguer-8.png",
         "category": "1",
-        "categoryName": "HAMBURGUESAS",
+        "categoryName": "hamburguesas",
         "description": "Black bean burger + repollo + cebolla caramelizada + zanahoria + muzzarella",
         "stock": 10,
         "quantity": 0
@@ -93,7 +93,7 @@
         "price": 250,
         "pictureUrl": "../../patatas-1.webp",
         "category": "2",
-        "categoryName": "FRITAS",
+        "categoryName": "fritas",
         "description": "Patatas fritas cortadas en laminas con salsa BQB y un toque picante",
         "stock": 16,
         "quantity": 0
@@ -104,7 +104,7 @@
         "price": 150,
         "pictureUrl": "../../patatas-2.webp",
         "category": "2",
-        "categoryName": "FRITAS",
+        "categoryName": "fritas",
         "description": "Patatas fritas cortadas en bastones",
         "stock": 16,
         "quantity": 0
@@ -115,7 +115,7 @@
         "price": 340,
         "pictureUrl": "../../patatas-3.webp",
         "category": "2",
-        "categoryName": "FRITAS",
+        "categoryName": "fritas",
         "description": "Papas fritas y nachos con salsa chedar, aceitunas, queso parmensano, pimiento",
         "stock": 12,
         "quantity": 0
@@ -126,7 +126,7 @@
         "price": 250,
         "pictureUrl": "../../patatas-4.webp",
         "category": "2",
-        "categoryName": "FRITAS",
+        "categoryName": "fritas",
         "description": "Papas fritas cortadas rusticas con picante",
         "stock": 13,
         "quantity": 0
@@ -137,7 +137,7 @@
         "price": 220,
         "pictureUrl": "../../cerveza-1.jpg",
         "category": "3",
-        "categoryName": "CERVEZAS",
+        "categoryName": "cervezas",
         "description": "Estilo Cream Ale, de color dorado, aroma frutado con notas cítricas. Redondeado sabor a malta, equilibrado por el toque amargo del lúpulo, destacándose un final cítrico que la hace muy refrescante y agradable al paladar. Disponible en botella de 500 ml y también de a litro: ¡una artesanal pa’litrear!",
         "stock": 21,
         "quantity": 0
@@ -148,7 +148,7 @@
         "price": 220,
         "pictureUrl": "../../cerveza-2.jpg",
         "category": "3",
-        "categoryName": "CERVEZAS",
+        "categoryName": "cervezas",
         "description": "Estilo originario de Escocia. De color ámbar profundo. Aroma dulce, maltoso con un toque de frutos secos. Dominante sabor a malta y caramelo, balanceado por el ligero amargor del lúpulo.",
         "stock": 17,
         "quantity": 0
@@ -159,7 +159,7 @@
         "price": 220,
         "pictureUrl": "../../cerveza-3.jpg",
         "category": "3",
-        "categoryName": "CERVEZAS",
+        "categoryName": "cervezas",
         "description": "Estilo Weizen, originario de Bavaria. Color amarillo pálido, con turbidez pronunciada, producto de la levadura especial y de no ser filtrada. Aroma a clavo de olor y banana. Sabor dulce y frutado. Muy refrescante.",
         "stock": 32,
         "quantity": 0
@@ -170,7 +170,7 @@
         "price": 220,
         "pictureUrl": "../../cerveza-4.jpg",
         "category": "3",
-        "categoryName": "CERVEZAS",
+        "categoryName": "cervezas",
         "description": "Cerveza fuerte, estilo India Pale Ale, originario de Inglaterra. De color cobre. Espuma cremosa y persistente. Aroma cítrico y frutado. Sabor amargo balanceado por el dulzor de la malta acentuado por el proceso de decocción. Su prolongada maduración le otorga un final amargo suave no astringente.",
         "stock": 15,
         "quantity": 0
@@ -181,7 +181,7 @@
         "price": 220,
         "pictureUrl": "../../cerveza-5.jpg",
         "category": "3",
-        "categoryName": "CERVEZAS",
+        "categoryName": "cervezas",
         "description": "Estilo American Pale Ale. De color ámbar claro, espuma blanca y voluminosa. Cuerpo medio. Sabor suave con marcados caracteres cítricos y baja maltosidad. Aroma cítrico y tropical intenso. La combinación de su riqueza en nariz y boca, con su ligereza al tomarla la hacen ideal para disfrutarla a lo largo de una tarde de verano.",
         "stock": 22,
         "quantity": 0
@@ -192,7 +192,7 @@
         "price": 220,
         "pictureUrl": "../../cerveza-6.jpg",
         "category": "3",
-        "categoryName": "CERVEZAS",
+        "categoryName": "cervezas",
         "description": "Estilo de origen americano. Color dorado, aroma frutado con notas cítricas. Redondeado sabor a malta, equilibrado por el toque amargo del lúpulo, destacándose un final cítrico que la hace muy refrescante y agradable al paladar.",
         "stock": 16,
         "quantity": 0
@@ -203,7 +203,7 @@
         "price": 220,
         "pictureUrl": "../../cerveza-7.jpg",
         "category": "3",
-        "categoryName": "CERVEZAS",
+        "categoryName": "cervezas",
         "description": "Elaborada con zapallo cabutiá, variedad local que le da a la cerveza un carácter típico del lugar. Aroma a especias. Sabor delicadamente dulce con un final que nos recuerda al dulce de zapallo de nuestras abuelas.",
         "stock": 12,
         "quantity": 0
@@ -214,7 +214,7 @@
         "price": 220,
         "pictureUrl": "../../cerveza-8.jpg",
         "category": "3",
-        "categoryName": "CERVEZAS",
+        "categoryName": "cervezas",
         "description": "Estilo Oatmeal Stout, originario de las Islas Británicas. Color negro intenso. Espuma sumamente cremosa. Aroma a café y chocolate amargo. Cuerpo pleno y sedoso. El sabor dulce de la malta contrasta con el amargo del grano tostado y el calor del alcohol.",
         "stock": 8,
         "quantity": 0

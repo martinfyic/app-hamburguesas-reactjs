@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import logoNav from "../assets/logohdp.png";
 import { BurguerButton } from "./BurguerButton";
@@ -9,31 +9,32 @@ import { CartWidget } from "./CartWidget";
 function Navbar() {
     const [clicked, setClicked] = useState(false);
     const handelClick = () => {
-        // cuando esta true lo pasa a false y vice versa
         setClicked(!clicked);
     };
     return (
         <>
             <NavContainer>
                 <nav>
-                    <Link to={"/"}>
+                    <NavLink to={"/"}>
                         <img src={logoNav} alt="logo hdp" />
-                    </Link>
+                    </NavLink>
                     <div className={`navMenuLinks ${clicked ? "active" : ""}`}>
                         <ul>
                             <li>
-                                <Link to={"/"}>INICIO</Link>
+                                <NavLink to="/">INICIO</NavLink>
                             </li>
                             <li>
-                                <Link to={"/category/hamburguesas"}>
+                                <NavLink to="/categoria/hamburguesas">
                                     HAMBURGUESAS
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to={"/category/fritas"}>FRITAS</Link>
+                                <NavLink to="/categoria/fritas">FRITAS</NavLink>
                             </li>
                             <li>
-                                <Link to={"/category/cervezas"}>CERVEZAS</Link>
+                                <NavLink to="/categoria/cervezas">
+                                    CERVEZAS
+                                </NavLink>
                             </li>
                         </ul>
                         <div className="cartWidgetBottom">

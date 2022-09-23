@@ -4,6 +4,7 @@ import { ItemListContainer } from "./components/Container/ItemListContainer";
 import { ItemDetailContainer } from "./components/Container/ItemDetailContainer";
 import { CartProvider } from "./context/CartContext";
 import "./App.css";
+import { Cart } from "./components/Container/Cart/Cart";
 
 const App = () => {
     return (
@@ -19,16 +20,16 @@ const App = () => {
                             }
                         />
                         <Route
-                            path="/item/:id"
+                            path="/categoria/:categid"
+                            element={<ItemListContainer greeting="Categoría" />}
+                        />
+                        <Route
+                            path="/detalle/:id"
                             element={
                                 <ItemDetailContainer titleDetail="Detalle de producto" />
                             }
                         />
-                        <Route
-                            path="/category/:categid"
-                            element={<ItemListContainer greeting="Categoría" />}
-                        />
-                        <Route path="/cart" element={<></>} />
+                        <Route path="/cart" element={<Cart />} />
                     </Routes>
                 </CartProvider>
             </BrowserRouter>

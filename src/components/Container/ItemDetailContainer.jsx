@@ -11,11 +11,8 @@ export const ItemDetailContainer = (props) => {
     useEffect(() => {
         setTimeout(async () => {
             const resp = await getDataProd();
-            const filterOneItem = resp.filter(
-                (elem) => elem.id === parseInt(id)
-            );
-            setItemDetail(filterOneItem);
-        }, 1000);
+            setItemDetail(resp.filter((elem) => elem.id === parseInt(id)));
+        }, 600);
     }, [id]);
 
     return (

@@ -6,29 +6,14 @@ import styles from "./ItemList.module.css";
 export const ItemList = ({ categoryId }) => {
     const [products, setProducts] = useState([]);
 
-    //filtrado de productos x categoria tomando referencia useParams 1-hamburguesas 2-cervezas 3-todos(undefineda)
     const getProducts = async (categoryId) => {
         const newProducts = await getDataProd();
-        if (categoryId === "hamburguesas") {
-            const burgers = newProducts.filter(
-                (elem) => elem.categoryName === categoryId.toUpperCase()
+        if (categoryId) {
+            setProducts(
+                newProducts.filter((elem) => elem.categoryName === categoryId)
             );
-            return setProducts(burgers);
-        }
-        if (categoryId === "fritas") {
-            const fried = newProducts.filter(
-                (elem) => elem.categoryName === categoryId.toUpperCase()
-            );
-            return setProducts(fried);
-        }
-        if (categoryId === "cervezas") {
-            const beers = newProducts.filter(
-                (elem) => elem.categoryName === categoryId.toUpperCase()
-            );
-            return setProducts(beers);
-        }
-        if (categoryId === undefined) {
-            return setProducts(newProducts);
+        } else {
+            setProducts(newProducts);
         }
     };
 

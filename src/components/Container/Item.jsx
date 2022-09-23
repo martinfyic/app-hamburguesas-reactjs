@@ -13,7 +13,7 @@ export const Item = (prod) => {
             />
             <h2 className={styles.itemTitle}>{prod.title}</h2>
             <p className={styles.itemPrice}>$ {prod.price}</p>
-            <Link to={`item/${prod.id}`}>
+            <Link to={`/detalle/${prod.id}`}>
                 <button className={styles.AddButton}>COMPRAR</button>
             </Link>
         </li>

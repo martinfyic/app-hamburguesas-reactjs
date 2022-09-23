@@ -19,7 +19,7 @@ export const CartWidget = () => {
         <Button variant="bg-none">
             <Badge bg="bg-none">
                 {" "}
-                <Link className={cssStyled.Link} to={"/cart"}>
+                <Link className={cssStyled.LinkCart} to={"/cart"}>
                     <img src={ImgBadage} alt="carrito de compras" />
                     <span className={cssStyled.cartCounter}>
                         {cart.length > 0 && productInCart}
