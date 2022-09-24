@@ -1,0 +1,37 @@
+.emptyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1000px;
+    height: 400px;
+    margin: 6rem auto;
+    border-radius: 1rem;
+    border: #f9f9f9 solid 1px;
+    box-shadow: 10px 10px 60px #4b4b4b;
+}
+
+.emptyinfo {
+    color: #f9f9f9;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px #000000;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+.emptyButton {
+    background-color: #ffc73b;
+    border: none;
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px 60px;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.emptyButton:hover {
+    transform: scale(0.95);
+    opacity: 0.9;
+}

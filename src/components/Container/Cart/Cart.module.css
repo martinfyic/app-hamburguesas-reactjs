@@ -1,83 +1,3 @@
-.CartContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1rem auto;
-    padding: 1rem;
-    background-color: #e0e0e0;
-    max-width: 800px;
-    border-radius: 1rem;
-    box-shadow: 7px 7px 15px #646464;
-}
-
-.CartContainer img {
-    width: 100px;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 7px 7px 10px #646464;
-}
-
-.infoContainer {
-    background-color: #e0e0e0;
-    width: 50%;
-}
-
-.infoContainer p {
-    background-color: #e0e0e0;
-    text-align: center;
-}
-
-.infoTitle {
-    color: #ffc73b;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px #000000;
-    letter-spacing: 0.2rem;
-}
-
-.infoQuantity {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #e0e0e0;
-    margin-bottom: 1.2rem;
-}
-
-.infoQuantity button {
-    color: #58595b;
-    background-color: #ffc73b;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px #646464;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-align: center;
-    width: 30px;
-    height: auto;
-}
-
-.infoQuantity button:hover {
-    transform: scale(0.95);
-}
-
-.infoQuantity p {
-    color: #000000;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px #646464;
-    letter-spacing: 0.2rem;
-    margin: 0;
-}
-
-.infoSubTotal {
-    color: #ffdead;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px #000000;
-    letter-spacing: 0.2rem;
-}
-
 .TotalInfoContainer {
     display: flex;
     justify-content: space-between;
@@ -111,6 +31,8 @@
 
 .TotalInfoContainer button {
     background-color: #000000;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
     color: #ffc73b;
     padding: 10px 60px;
     border-radius: 1rem;

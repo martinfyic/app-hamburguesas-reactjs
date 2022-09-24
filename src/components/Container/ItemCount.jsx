@@ -52,7 +52,7 @@ export const ItemCount = ({ addProduct, lessProduct, counter, prod }) => {
                         onClick={() => navigate("/cart")}
                         className={styles.SecondaryButton}
                     >
-                        Finalizar
+                        Carrito
                     </button>
                 </div>
             )}

@@ -52,11 +52,11 @@
 
 .SecondaryButton {
     width: 150px;
-    color: white;
+    color: #000000;
     font-size: 1rem;
     font-weight: 700;
     padding: 0.3rem 1.3rem;
-    background-color: #959595;
+    background-color: #ffc73b;
     border: none;
     border-radius: 10px;
     transition: all 0.3s;

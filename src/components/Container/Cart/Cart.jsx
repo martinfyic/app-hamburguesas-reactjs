@@ -1,56 +1,51 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../../context/CartContext";
 import styles from "./Cart.module.css";
+import { CartEmpty } from "./CartEmpty";
+import { CartWithProducts } from "./CartWithProducts";
 
 export const Cart = () => {
     const { cart, deleteItemToCart, addItemToCart, clearCart } =
         useContext(CartContext);
-    return (
-        <div>
-            <div>
-                {cart.map((cartItem) => {
-                    return (
-                        <div key={cartItem.id} className={styles.CartContainer}>
-                            <img
-                                src={cartItem.pictureUrl}
-                                alt={cartItem.title}
-                            />
-                            <div className={styles.infoContainer}>
-                                <p className={styles.infoTitle}>
-                                    Producto: {cartItem.title}
-                                </p>
-                                <div className={styles.infoQuantity}>
-                                    <button
-                                        onClick={() =>
-                                            deleteItemToCart(cartItem)
-                                        }
-                                    >
-                                        -
-                                    </button>
-                                    <p>Unidades {cartItem.quantity}</p>
-                                    <button
-                                        onClick={() => addItemToCart(cartItem)}
-                                    >
-                                        +
-                                    </button>
-                                </div>
+    const [countProducts, setCountProducts] = useState(0);
+    const [countPrice, setCountPrice] = useState(0);
 
-                                <p className={styles.infoSubTotal}>
-                                    Total ${cartItem.quantity * cartItem.price}
-                                </p>
-                            </div>
+    useEffect(() => {
+        setCountProducts(cart.reduce((pre, curr) => pre + curr.quantity, 0));
+    }, [cart]);
+
+    useEffect(() => {
+        setCountPrice(
+            cart.reduce((pre, curr) => pre + curr.quantity * curr.price, 0)
+        );
+    }, [cart]);
+
+    return (
+        <>
+            {cart.length > 0 ? (
+                <>
+                    <div>
+                        {cart.map((cartItem) => (
+                            <CartWithProducts
+                                key={cartItem.id}
+                                cartItem={cartItem}
+                                deleteItemToCart={deleteItemToCart}
+                                addItemToCart={addItemToCart}
+                            />
+                        ))}
+                    </div>
+                    <div className={styles.TotalInfoContainer}>
+                        <div className={styles.TotalInfo}>
+                            <p>Total productos {countProducts}</p>
+                            <p>Total a pagar ${countPrice}</p>
                         </div>
-                    );
-                })}
-            </div>
-            <div className={styles.TotalInfoContainer}>
-                <div className={styles.TotalInfo}>
-                    <p>Total productos</p>
-                    <p>Total a pagar $</p>
-                </div>
-                <button onClick={clearCart}>Vaciar</button>
-                <button>Finalizar</button>
-            </div>
-        </div>
+                        <button onClick={clearCart}>Vaciar</button>
+                        <button>Finalizar</button>
+                    </div>
+                </>
+            ) : (
+                <CartEmpty />
+            )}
+        </>
     );
 };
