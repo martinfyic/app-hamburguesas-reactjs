@@ -1,16 +1,21 @@
+import { Loader } from "../../utilities/Loader";
 import { Item } from "./Item";
 import styles from "./ItemList.module.css";
 
 export const ItemList = ({ products }) => {
     return (
-        <ul className={!products.length ? styles.snniper : styles.itemListGrid}>
+        <>
             {!products.length ? (
-                <div className={styles.snniperContainer}>
-                    <span className={styles.loader}></span>
+                <div className={styles.spinner}>
+                    <Loader />
                 </div>
             ) : (
-                products.map((prod) => <Item key={prod.id} {...prod} />)
+                <ul className={styles.itemListGrid}>
+                    {products.map((prod) => (
+                        <Item key={prod.id} {...prod} />
+                    ))}
+                </ul>
             )}
-        </ul>
+        </>
     );
 };
