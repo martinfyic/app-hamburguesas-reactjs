@@ -14,11 +14,6 @@
     transition: all 0.3s;
 }
 
-.imgProd:hover {
-    opacity: 0.8;
-    transform: scale(0.99);
-}
-
 .infoContainer {
     padding: 0 3rem;
     display: flex;

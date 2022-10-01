@@ -1,14 +1,20 @@
 import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../../context/CartContext";
-import styles from "./Cart.module.css";
 import { CartEmpty } from "./CartEmpty";
 import { CartWithProducts } from "./CartWithProducts";
+import { CartTotalInfo } from "./CartTotalInfo";
+import { FormPurch } from "./FormPurch";
 
 export const Cart = () => {
     const { cart, deleteItemToCart, addItemToCart, clearCart } =
         useContext(CartContext);
     const [countProducts, setCountProducts] = useState(0);
     const [countPrice, setCountPrice] = useState(0);
+    const [finishShop, setFinishShop] = useState(false);
+
+    const handleFinish = () => {
+        setFinishShop(!finishShop);
+    };
 
     useEffect(() => {
         setCountProducts(cart.reduce((pre, curr) => pre + curr.quantity, 0));
@@ -34,18 +40,18 @@ export const Cart = () => {
                             />
                         ))}
                     </div>
-                    <div className={styles.TotalInfoContainer}>
-                        <div className={styles.TotalInfo}>
-                            <p>Total productos {countProducts}</p>
-                            <p>Total a pagar ${countPrice}</p>
-                        </div>
-                        <button onClick={clearCart}>Vaciar</button>
-                        <button>Finalizar</button>
-                    </div>
+                    <CartTotalInfo
+                        countProducts={countProducts}
+                        countPrice={countPrice}
+                        clearCart={clearCart}
+                        handleFinish={handleFinish}
+                        finishShop={finishShop}
+                    />
                 </>
             ) : (
                 <CartEmpty />
             )}
+            {finishShop && cart.length > 0 && <FormPurch />}
         </>
     );
 };

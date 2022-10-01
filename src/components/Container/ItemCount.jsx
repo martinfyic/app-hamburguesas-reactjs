@@ -4,7 +4,7 @@ import { CartContext } from "../../context/CartContext";
 import styles from "./ItemCount.module.css";
 
 export const ItemCount = ({ addProduct, lessProduct, counter, prod }) => {
-    const { addItemToCart, deleteItemToCart, isInCart } =
+    const { addItemToCart, deleteItemToCart, isInCart, cart } =
         useContext(CartContext);
     const navigate = useNavigate();
 
