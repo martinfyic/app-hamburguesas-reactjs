@@ -1,0 +1,60 @@
+.ContainerSendForm {
+    max-width: 800px;
+    margin: 10rem auto;
+}
+
+.TitleName {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #e0e0e0;
+    letter-spacing: 0.3rem;
+}
+
+.idPurch {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #e0e0e0;
+    letter-spacing: 0.3rem;
+}
+
+.idPurch span {
+    font-weight: 700;
+    color: #ffc73b;
+}
+
+.nameBuyer {
+    font-weight: 700;
+    color: #ffc73b;
+}
+
+.direction {
+    color: #e0e0e0;
+    font-size: 2rem;
+}
+
+.direction span {
+    color: #ffc73b;
+    font-weight: 700;
+}
+
+.ContainerSendForm hr {
+    color: #e0e0e0;
+}
+
+.ContainerSendForm h4 {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+}
+
+.totalDetail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+}
+
+.totalDetail span {
+    font-weight: 700;
+    color: #ffc73b;
+}

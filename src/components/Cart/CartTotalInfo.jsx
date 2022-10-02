@@ -1,12 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./CartTotalInfo.module.css";
 
-export const CartTotalInfo = ({
-    countProducts,
-    countPrice,
-    clearCart,
-    handleFinish,
-    finishShop,
-}) => {
+export const CartTotalInfo = ({ countProducts, countPrice, clearCart }) => {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className={styles.TotalInfoContainer}>
@@ -15,9 +12,7 @@ export const CartTotalInfo = ({
                     <p>Total a pagar ${countPrice}</p>
                 </div>
                 <button onClick={clearCart}>Vaciar</button>
-                <button onClick={handleFinish}>
-                    {finishShop ? "Volver" : "Finalizar"}
-                </button>
+                <button onClick={() => navigate("/formulario")}>Comprar</button>
             </div>
         </>
     );

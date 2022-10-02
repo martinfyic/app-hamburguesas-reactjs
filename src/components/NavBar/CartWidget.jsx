@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import cssStyled from "./CartWidget.module.css";
 import { CartContext } from "../../context/CartContext";
-import ImgBadage from "../assets/cartWidget.svg";
+import ImgBadage from "../../assets/cartWidget.svg";
 
 export const CartWidget = () => {
     const [productInCart, setProductInCart] = useState(0);

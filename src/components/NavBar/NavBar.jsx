@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import logoNav from "../assets/logohdp.png";
+import logoNav from "../../assets/logohdp.png";
 import { BurguerButton } from "./BurguerButton";
 import { CartWidget } from "./CartWidget";
 

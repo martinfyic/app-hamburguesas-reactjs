@@ -1,20 +1,14 @@
 import { useContext, useState, useEffect } from "react";
-import { CartContext } from "../../../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import { CartEmpty } from "./CartEmpty";
 import { CartWithProducts } from "./CartWithProducts";
 import { CartTotalInfo } from "./CartTotalInfo";
-import { FormPurch } from "./FormPurch";
 
 export const Cart = () => {
     const { cart, deleteItemToCart, addItemToCart, clearCart } =
         useContext(CartContext);
     const [countProducts, setCountProducts] = useState(0);
     const [countPrice, setCountPrice] = useState(0);
-    const [finishShop, setFinishShop] = useState(false);
-
-    const handleFinish = () => {
-        setFinishShop(!finishShop);
-    };
 
     useEffect(() => {
         setCountProducts(cart.reduce((pre, curr) => pre + curr.quantity, 0));
@@ -44,14 +38,11 @@ export const Cart = () => {
                         countProducts={countProducts}
                         countPrice={countPrice}
                         clearCart={clearCart}
-                        handleFinish={handleFinish}
-                        finishShop={finishShop}
                     />
                 </>
             ) : (
                 <CartEmpty />
             )}
-            {finishShop && cart.length > 0 && <FormPurch />}
         </>
     );
 };
