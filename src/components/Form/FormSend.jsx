@@ -16,7 +16,7 @@ export const FormSend = ({
                 <span className={styled.nameBuyer}>{name}</span>!
             </h2>
             <h3 className={styled.idPurch}>
-                ID de compra: <span>{idOrder}</span>
+                ID: <span>{idOrder}</span>
             </h3>
             <p className={styled.direction}>
                 Dirección de envío <span>{direction}</span>
@@ -30,7 +30,8 @@ export const FormSend = ({
             </ul>
             <div className={styled.totalDetail}>
                 <p>
-                    Cantidad de productos comprados <span>{countProducts}</span>
+                    Cantidad de productos comprados:{" "}
+                    <span>{countProducts}</span>
                 </p>
                 <p>
                     Total a pagar <span>${totalPrice}</span>

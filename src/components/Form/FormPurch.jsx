@@ -13,7 +13,7 @@ export const FormPurch = ({ register, handleSubmit, onSubmit }) => {
                 <input id="email" type="text" {...register("email")} />
                 <label htmlFor="direction">Dirección</label>
                 <input id="direction" type="text" {...register("direction")} />
-                <label htmlFor="phone">Telefono</label>
+                <label htmlFor="phone">Teléfono</label>
                 <input id="phone" type="number" {...register("phone")} />
                 <button type="submit" value="Enviar">
                     Finalizar Compra
