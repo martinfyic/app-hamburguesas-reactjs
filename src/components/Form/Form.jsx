@@ -6,7 +6,11 @@ import { FormSend } from "./FormSend";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 export const Form = () => {
-    const { register, handleSubmit } = useForm();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
     const { cart } = useContext(CartContext);
     const [totalPrice, setTotalPrice] = useState();
     const [itemBuy, setItemBuy] = useState([]);
@@ -50,6 +54,7 @@ export const Form = () => {
                     register={register}
                     handleSubmit={handleSubmit}
                     onSubmit={onSubmit}
+                    errors={errors}
                 />
             ) : (
                 <FormSend

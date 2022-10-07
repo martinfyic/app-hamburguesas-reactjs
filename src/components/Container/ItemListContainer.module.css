@@ -1,5 +1,5 @@
 .Title {
-    color: #ffc73b;
+    color: #e0e0e0;
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 5rem;
@@ -8,7 +8,7 @@
 }
 
 .subTitle {
-    color: #ffdead;
+    color: #ffc73b;
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 5rem;
@@ -17,7 +17,7 @@
 }
 
 .ShoppingCart p {
-    color: #ffdead;
+    color: #ffc73b;
     font-size: 2rem;
     font-weight: 400;
     text-align: center;

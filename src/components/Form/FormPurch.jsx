@@ -1,20 +1,20 @@
 import styled from "./FormPurch.module.css";
+import { InputDirection } from "./inputsForm/InputDirection";
+import { InputEmail } from "./inputsForm/InputEmail";
+import { InputLastName } from "./inputsForm/InputLastName";
+import { InputName } from "./inputsForm/InputName";
+import { InputPhone } from "./inputsForm/InputPhone";
 
-export const FormPurch = ({ register, handleSubmit, onSubmit }) => {
+export const FormPurch = ({ register, handleSubmit, onSubmit, errors }) => {
     return (
         <div className={styled.FormContainer}>
             <h2>Formulario</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <label htmlFor="name">Nombre</label>
-                <input type="text" id="name" {...register("name")} />
-                <label htmlFor="lastName">Apellido</label>
-                <input type="text" id="lastName" {...register("lastName")} />
-                <label htmlFor="email">Email</label>
-                <input id="email" type="text" {...register("email")} />
-                <label htmlFor="direction">Dirección</label>
-                <input id="direction" type="text" {...register("direction")} />
-                <label htmlFor="phone">Teléfono</label>
-                <input id="phone" type="number" {...register("phone")} />
+                <InputName register={register} errors={errors} />
+                <InputLastName register={register} errors={errors} />
+                <InputEmail register={register} errors={errors} />
+                <InputDirection register={register} errors={errors} />
+                <InputPhone register={register} errors={errors} />
                 <button type="submit" value="Enviar">
                     Finalizar Compra
                 </button>
