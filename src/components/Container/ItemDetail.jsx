@@ -5,7 +5,6 @@ import styles from "./ItemDetail.module.css";
 
 export const ItemDetail = ({ dataDetail }) => {
     const [counter, setCounter] = useState(1);
-    //Sumar 1 prod, con limite de stock
     const addProduct = () => {
         let stockItem = dataDetail.stock;
         if (stockItem > counter) {
@@ -13,7 +12,6 @@ export const ItemDetail = ({ dataDetail }) => {
         }
     };
 
-    //Restar 1 prod, con limite de 1
     const lessProduct = () => {
         if (1 < counter) {
             setCounter(counter - 1);

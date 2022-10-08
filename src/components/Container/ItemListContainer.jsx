@@ -9,6 +9,7 @@ import {
 } from "firebase/firestore";
 import styles from "./ItemListContainer.module.css";
 import { useEffect, useState } from "react";
+import { Landing } from "../../utilities/Landing";
 
 export const ItemListContainer = (props) => {
     const { categid } = useParams();
@@ -39,7 +40,9 @@ export const ItemListContainer = (props) => {
     return (
         <>
             <h1 className={styles.Title}>{props.greeting}</h1>
-            {categid && (
+            {!categid ? (
+                <Landing />
+            ) : (
                 <h2 className={styles.subTitle}>{categid.toUpperCase()}</h2>
             )}
             <ItemList products={products} />

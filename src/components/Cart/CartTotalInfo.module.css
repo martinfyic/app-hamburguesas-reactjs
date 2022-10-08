@@ -42,3 +42,35 @@
 .TotalInfoContainer button:hover {
     transform: scale(0.95);
 }
+
+@media (max-width: 776px) {
+    .TotalInfoContainer {
+        flex-direction: column;
+        max-width: 600px;
+        border-radius: 1rem;
+        box-shadow: 0.7rem 0.7rem 2rem #646464;
+    }
+
+    .TotalInfo {
+        width: 100%;
+        justify-content: center;
+        padding: 1.2rem;
+    }
+
+    .TotalInfoContainer button {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .TotalInfoContainer {
+        flex-direction: column;
+        max-width: 300px;
+        border-radius: 1rem;
+        box-shadow: 0.7rem 0.7rem 2rem #646464;
+    }
+
+    .TotalInfo p {
+        margin: 0;
+    }
+}
