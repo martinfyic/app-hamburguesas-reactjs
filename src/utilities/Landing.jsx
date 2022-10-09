@@ -10,37 +10,37 @@ export const Landing = () => {
         <Carousel fade controls={false} indicators={false} className="mb-5 p-5">
             <Carousel.Item interval={2500}>
                 <img
-                    className="d-block w-75 mx-auto"
+                    className="d-block w-75 mx-auto shadow-lg rounded"
                     src={imgHero1}
                     alt="First slide"
                 />
             </Carousel.Item>
             <Carousel.Item interval={2500}>
                 <img
-                    className="d-block w-75 mx-auto"
+                    className="d-block w-75 mx-auto shadow-lg rounded"
                     src={imgHero2}
                     alt="Second slide"
                 />
             </Carousel.Item>
             <Carousel.Item interval={2500}>
                 <img
-                    className="d-block w-75 mx-auto"
+                    className="d-block w-75 mx-auto shadow-lg rounded"
                     src={imgHero3}
                     alt="Third slide"
                 />
             </Carousel.Item>
             <Carousel.Item interval={2500}>
                 <img
-                    className="d-block w-75 mx-auto"
+                    className="d-block w-75 mx-auto shadow-lg rounded"
                     src={imgHero4}
-                    alt="Third slide"
+                    alt="Four slide"
                 />
             </Carousel.Item>
             <Carousel.Item interval={2500}>
                 <img
-                    className="d-block w-75 mx-auto"
+                    className="d-block w-75 mx-auto shadow-lg rounded"
                     src={imgHero5}
-                    alt="Third slide"
+                    alt="Five slide"
                 />
             </Carousel.Item>
         </Carousel>

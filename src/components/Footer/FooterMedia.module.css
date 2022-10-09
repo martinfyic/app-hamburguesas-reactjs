@@ -1,0 +1,22 @@
+.iconContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.iconMedia {
+    color: #e0e0e0;
+    font-size: 2.4rem;
+    margin: 0 2rem;
+    transition: all 0.3s ease;
+}
+
+.iconMedia:hover {
+    color: #ffc73b;
+    transform: scale(0.96);
+}
+
+@media (max-width: 800px) {
+    .iconContainer {
+        justify-content: center;
+    }
+}

@@ -39,6 +39,7 @@
     border: none;
     border-radius: 10px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .AddButton:hover {

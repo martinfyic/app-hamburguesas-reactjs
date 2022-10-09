@@ -1,0 +1,25 @@
+.leftFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.leftFooter a {
+    margin: 0 auto;
+}
+
+.leftFooter img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.leftFooter h4 {
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.2rem;
+}

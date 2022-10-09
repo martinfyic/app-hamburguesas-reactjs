@@ -1,0 +1,13 @@
+.comentContainer p {
+    color: #e0e0e0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.comentContainer hr {
+    color: #e0e0e0;
+    margin-bottom: 3rem;
+}

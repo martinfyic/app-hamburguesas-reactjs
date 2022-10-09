@@ -11,6 +11,7 @@ export const Form = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
+
     const { cart } = useContext(CartContext);
     const [totalPrice, setTotalPrice] = useState();
     const [itemBuy, setItemBuy] = useState([]);

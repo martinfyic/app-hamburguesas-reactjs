@@ -67,3 +67,38 @@
     background-color: #ffdead;
     transform: scale(0.98);
 }
+
+@media (max-width: 920px) {
+    .FormContainer {
+        max-width: 600px;
+    }
+
+    .FormContainer h2 {
+        font-size: 2rem;
+    }
+
+    .FormContainer form {
+        width: 100%;
+    }
+
+    .FormContainer label {
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        margin-left: 0.5rem;
+        margin-top: 0.6rem;
+    }
+
+    .FormContainer input {
+        padding: 0.3rem;
+        margin-top: 1rem;
+    }
+
+    .FormContainer p {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: red;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+    }
+}

@@ -1,0 +1,19 @@
+.footerContainer {
+    max-width: 1500px;
+    margin: 8rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerContainerMedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+    .footerContainer {
+        flex-direction: column;
+    }
+}

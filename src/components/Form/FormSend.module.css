@@ -58,3 +58,42 @@
     font-weight: 700;
     color: #ffc73b;
 }
+
+@media (max-width: 800px) {
+    .ContainerSendForm {
+        max-width: 500px;
+    }
+
+    .TitleName {
+        font-size: 2rem;
+    }
+
+    .idPurch {
+        font-size: 1.5rem;
+    }
+
+    .direction {
+        color: #e0e0e0;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .ContainerSendForm {
+        max-width: 350px;
+        margin: 5rem auto;
+    }
+
+    .TitleName {
+        font-size: 1.5rem;
+    }
+
+    .idPurch {
+        font-size: 1rem;
+    }
+
+    .direction {
+        color: #e0e0e0;
+        font-size: 1rem;
+    }
+}

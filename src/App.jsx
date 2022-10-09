@@ -7,6 +7,7 @@ import { Cart } from "./components/Cart/Cart";
 import Navbar from "./components/NavBar/NavBar";
 import { Form } from "./components/Form/Form";
 import "./App.css";
+import { Footer } from "./components/Footer/Footer";
 
 const App = () => {
     return (
@@ -34,6 +35,7 @@ const App = () => {
                         <Route path="/formulario" element={<Form />} />
                         <Route path="/cart" element={<Cart />} />
                     </Routes>
+                    <Footer />
                 </CartProvider>
             </BrowserRouter>
         </>
