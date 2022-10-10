@@ -7,11 +7,18 @@ export const InputDirection = ({ register, errors }) => {
                 type="text"
                 {...register("direction", {
                     required: true,
-                    maxLength: 45,
+                    maxLength: 50,
+                    minLength: 8,
                 })}
             />
             {errors.direction?.type === "required" && (
                 <p>El campo es requerido</p>
+            )}
+            {errors.direction?.type === "maxLength" && (
+                <p>Maximo 45 caracteres</p>
+            )}
+            {errors.direction?.type === "minLength" && (
+                <p>Mínimo 8 caracteres</p>
             )}
         </>
     );

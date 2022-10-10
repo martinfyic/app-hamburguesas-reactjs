@@ -1,91 +1,44 @@
-# H.D.P Smash Burgers
+# `H.D.P Smash Burgers`
 
 Proyecto para el curso de **React Js** de [Coderhouse](https://www.coderhouse.com.uy/ "Coderhouse")
+
 Comisión **43645**
 
-## `Consigna`
+Este es mi segundo proyecto Front-End. Se trata de un e-commerce ficticio realizado para el tercer curso de Coderhouse; completando así la carrera de Front-End. Es posible ampliar el detalle de cada producto sin recargar la página utilizando el routing de React. A partir de ahí, estos se pueden agregar al carrito. En la vista del carrito, se pueden eliminar artículos y hay un formulario de compra. Luego, la información se sube a firebase.
 
-Generar un ecommerce con React Js,
+## `Deploy`
 
-Tome la decisión de crear una hamburguesería, si bien no es un ecommerce, creo que puedo cumplir con la consigna del curso.
+Podés acceder al deploy en github pages en este link: [https://martin-ferreira-yic-burgers.netlify.app/](https://martin-ferreira-yic-burgers.netlify.app/)
 
-### `Gif`
+## `Ejecutar el sitio web directamente desde su repositorio`
 
-[![gif](https://github.com/martinfyic/cursoreactjs/blob/master/Proyecto-React-HDP-Burger.gif?raw=true)](https://github.com/martinfyic/cursoreactjs/blob/master/Proyecto-React-HDP-Burger.gif?raw=true)
+Una vez descargado el repositorio, abrílo con tu terminal:
 
-## Link Deploy
+-   Ejecutá `npm install` y espere a que se descarguen los node'modules. Luego:
+-   Ejecutá `npm start` Luego debería abrirse en el navegador. Para que esto funcione tiene que estar npm instalado.
 
-La app esta en [Netlify](https://www.netlify.com/ "Netlify") en el siguiente link [H.D.P Smash Burgers](https://martin-ferreira-yic-burgers.netlify.app/ "H.D.P Smash Burgers")
+## `Paquetes y componentes de código abierto utilizados:`
 
----
+-   [React Router Dom](https://reactrouter.com/): Necesario para cambiar las vistas y navegar por los componentes.
+-   [Context](https://reactjs.org/docs/context.html): React Context ya viene con la instalación de React y fue importante para la realización de este proyecto.
+-   [React Hook Form](https://react-hook-form.com/): Aproveche el potencial de React Hook Form el cual permite reducir la cantidad de código que se necesita escribir mientras elimina los renderizados innecesarios.
+-   [styled-components](https://styled-components.com/): Parte de los estilos del navbar fueron creados con styled-component, esto fue requerido en uno de los desafíos del curso, donde se nos solicitaba agregar estilos con una libreria.
+-   [React Bootstrap](https://react-bootstrap.github.io/): Utilice bootstrap para poder generar generar el slider de la pagina principal.
 
-## Getting Started with Create React App
+## `Estilo y Responsive`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Los estilos los realice mediante CSS, salvo el navBar que utilice styled-component
 
-## Available Scripts
+## `Firebase`
 
-In the project directory, you can run:
+También aprendimos a usar las base de datos de firebase durante este curso de programación. Las dos colecciones realizadas para este proyecto son:
 
-### `npm start`
+-   `productsData:` Se utiliza para almacenar información sobre cada producto.
+-   `orders`: Se utiliza para almacenar las ventas realizadas por los usuarios y así simular lo que haría un e-commerce real después de recibir los datos del usuario.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Gracias por leer y espero que te guste
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Te dejo mis contactos para que si lo deseas puedas darme un feedback y ayudarme a seguir mejorando
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   email: martin.f.yic@gmail.com
+-   [linkedin](https://www.linkedin.com/in/martin-ferreira-yic/)
