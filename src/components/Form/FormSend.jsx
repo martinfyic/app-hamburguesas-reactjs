@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import styled from "./FormSend.module.css";
 import { FormSendDetailProd } from "./FormSendDetailProd";
 
@@ -7,8 +10,18 @@ export const FormSend = ({
     countProducts,
     totalPrice,
 }) => {
+    const { clearCart } = useContext(CartContext);
+
+    const navigate = useNavigate();
+
     const { name, direction } = orderDetail.buyer;
     const { itemBuy } = orderDetail;
+
+    const finished = () => {
+        navigate("/");
+        clearCart();
+    };
+
     return (
         <div className={styled.ContainerSendForm}>
             <h2 className={styled.TitleName}>
@@ -38,6 +51,9 @@ export const FormSend = ({
                 </p>
             </div>
             <hr />
+            <div className={styled.buttonContainer}>
+                <button onClick={finished}>Salir</button>
+            </div>
         </div>
     );
 };

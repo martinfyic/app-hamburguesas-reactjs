@@ -59,6 +59,28 @@
     color: #ffc73b;
 }
 
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonContainer button {
+    background-color: #ffc73b;
+    color: #000000;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    width: 50%;
+    margin: 3rem;
+    transition: all 0.3s;
+}
+
+.buttonContainer button:hover {
+    background-color: #ffdead;
+    transform: scale(0.96);
+    width: 60%;
+}
+
 @media (max-width: 800px) {
     .ContainerSendForm {
         max-width: 500px;
