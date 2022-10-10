@@ -4,7 +4,7 @@ Proyecto para el curso de **React Js** de [Coderhouse](https://www.coderhouse.co
 
 Comisión **43645**
 
-Este es mi segundo proyecto Front-End. Se trata de un e-commerce ficticio realizado para el tercer curso de Coderhouse; completando así la carrera de Front-End. Es posible ampliar el detalle de cada producto sin recargar la página utilizando el routing de React. A partir de ahí, estos se pueden agregar al carrito. En la vista del carrito, se pueden eliminar artículos y hay un formulario de compra. Luego, la información se sube a firebase.
+Este es mi segundo proyecto Front-End y mi primero con React Js. Se trata de un e-commerce ficticio realizado para el tercer curso de Coderhouse; completando así la carrera de Front-End. Es posible ampliar el detalle de cada producto sin recargar la página utilizando el routing de React. A partir de ahí, estos se pueden agregar al carrito. En la vista del carrito, se pueden eliminar artículos y hay un formulario de compra. Luego, la información se sube a firebase.
 
 ## `Deploy`
 
