@@ -8,7 +8,7 @@ Este es mi segundo proyecto Front-End y mi primero con React Js. Se trata de un 
 
 ## `Deploy`
 
-Podés acceder al deploy en github pages en este link: [https://martin-ferreira-yic-burgers.netlify.app/](https://martin-ferreira-yic-burgers.netlify.app/)
+Podés acceder al deploy en github pages en este link: [Netlify](https://proyecto-reactjs-martin.netlify.app/)
 
 ## `Ejecutar el sitio web directamente desde su repositorio`
 
